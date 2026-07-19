@@ -1,0 +1,1050 @@
+/* ================= NAVBAR SECTION (FIXED & CENTERED) ================= */
+.main-navbar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e7eb;
+    position: fixed;       
+    top: 0;
+    left: 0;
+    z-index: 1000;         
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px;
+    font-family: sans-serif;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.nav-menu .nav-link {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.nav-menu .nav-link:hover {
+    color: #3b82f6; 
+}
+
+/* Active Link Indicator Line (Ab yeh automatic Contact par blue line show karega) */
+.nav-link.active-link {
+    color: #3b82f6;
+}
+
+.nav-link.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3b82f6; 
+    border-radius: 2px;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: #4b5563;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.search-btn:hover {
+    color: #1e293b;
+}
+
+body {
+    padding-top: 65px; 
+}
+
+@media (max-width: 680px) {
+    .nav-menu {
+        position: static;
+        transform: none;
+        gap: 16px;
+    }
+}
+/* ================= 8 & 9. MERGED SIDE-BY-SIDE CONTACT SECTION ================= */
+.contact-page-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.contact-page-section * {
+    box-sizing: border-box;
+}
+
+/* Master Grid: 2 Columns Side-by-Side */
+.contact-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr; /* Form section gets slightly more space */
+    gap: 80px;                        /* Generous horizontal space between blocks */
+    align-items: flex-start;
+}
+
+/* --- LEFT SIDE: TEXT CONTENT & ICONS --- */
+.contact-info-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-top-tag {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.info-main-heading {
+    font-size: 44px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+.info-intro-text p {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+/* Vertical Arrangement Box for Lists */
+.info-vertical-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* Row wrapper layout for image circle + text side by side */
+.info-inline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Square Container box for Icons matching image */
+.info-icon-square {
+    width: 48px;
+    height: 48px;
+    background-color: #eff6ff; /* Soft blue tint behind icon */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-icon-square img {
+    width: 20px;               /* Scaled precisely to match reference interface design */
+    height: auto;
+    object-fit: contain;
+}
+
+.info-item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-block-title {
+    font-size: 15px;
+    color: #0f172a;
+    margin: 0 0 2px 0;
+}
+
+.info-main-data {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 2px 0;
+}
+
+.info-main-data.mail-link {
+    color: #2563eb;
+}
+
+.info-sub-text {
+    font-size: 12.5px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* --- RIGHT SIDE: THE FORM CARD --- */
+.form-card-box {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+}
+
+.form-main-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 24px 0;
+    letter-spacing: -0.3px;
+}
+
+.contact-main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-inline-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.input-group-field {
+    flex: 1;
+}
+
+.contact-main-form input[type="text"],
+.contact-main-form input[type="email"],
+.contact-main-form textarea {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #0f172a;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-main-form input:focus,
+.contact-main-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.contact-main-form textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.form-full-row {
+    width: 100%;
+}
+
+.form-action-row {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.contact-submit-btn {
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.form-privacy-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #64748b;
+    font-size: 12.5px;
+    margin-top: 8px;
+}
+
+.form-privacy-note svg {
+    color: #475569;
+}
+
+/* --- Responsive Layout Breakpoints --- */
+@media (max-width: 992px) {
+    .contact-page-container {
+        grid-template-columns: 1fr; /* Stack left block over right form on tablet/mobile views */
+        gap: 60px;
+    }
+    
+    .info-main-heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 580px) {
+    .form-card-box {
+        padding: 24px;
+    }
+
+    .form-inline-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+/* ================= 10. 4-COLUMN INQUIRIES CARD GRID ================= */
+.inquiries-grid-section {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.inquiries-grid-section * {
+    box-sizing: border-box;
+}
+
+/* 4-Column Responsive Layout Grid Layout Frame */
+.inquiries-container-row {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Exactly 4 equal size horizontal block grids */
+    gap: 24px;                             /* Grid column-to-column outer spacer spacing */
+}
+
+/* Individual Feature Info Card Block Frame */
+.inquiry-card-item {
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;             /* Soft boundary perimeter line matching screen sketch */
+    border-radius: 12px;                   /* Delicate curved modern layouts radius edges */
+    padding: 35px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;                   /* Aligns image contents and textual headers directly in center */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Optional hover polish matching rich dashboard items visual indicators */
+.inquiry-card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+/* Icon circular display platform setup matching reference */
+.inquiry-icon-circle {
+    width: 64px;
+    height: 64px;
+    background-color: #eff6ff;             /* Very light soft blue ambient background tint glow */
+    border-radius: 50%;                    /* Turns box into circular disk target design shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.inquiry-icon-circle img {
+    width: 28px;                           /* Scales the custom animated .gifs precisely inside circle */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Card Section Header Content Titles */
+.inquiry-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.2px;
+}
+
+/* Card inner paragraphs spacer box containment */
+.inquiry-content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;                              /* Clean line breaks gaps structure adjustments */
+}
+
+/* Crucial data strings labels values (Times / Scheduling entries) */
+.inquiry-highlight {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #334155;
+    margin: 0;
+}
+
+/* Core Contact interactive text details (Mail routes links styling) */
+.inquiry-link-data {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #2563eb;                        /* Dynamic action links corporate primary brand tint blue */
+    margin: 0 0 4px 0;
+    word-break: break-all;                 /* Safeguards long text labels string leakage bugs layout */
+}
+
+/* Outer details/Lorem notes descriptive blocks rules */
+.inquiry-description {
+    font-size: 13px;
+    color: #64748b;                        /* Light secondary presentation gray contrast layout */
+    line-height: 1.5;
+    margin: 6px 0 0 0;
+}
+
+/* --- Responsive Layout Adjustments Breakdown --- */
+
+/* Medium tablets viewpoint monitors screen configurations styling */
+@media (max-width: 1024px) {
+    .inquiries-container-row {
+        grid-template-columns: repeat(2, 1fr); /* Snaps layout safely directly into standard solid 2x2 square tile box grid */
+        gap: 20px;
+    }
+}
+
+/* Mobile smartphones device portrait alignments grids definitions */
+@media (max-width: 580px) {
+    .inquiries-container-row {
+        grid-template-columns: 1fr;            /* Converts into single stack line layout display tray tracking */
+        gap: 16px;
+    }
+    
+    .inquiry-card-item {
+        padding: 30px 20px;
+    }
+}
+/* ================= 7. NEWSLETTER CTA BANNER SECTION ================= */
+.footer-cta-section {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.footer-cta-section * {
+    box-sizing: border-box;
+}
+
+/* Master Dark Banner Wrapper Container */
+.cta-banner-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%); /* Premium dark tech background gradient look */
+    border-radius: 16px;        /* Match modern curved interfaces layout */
+    padding: 40px 50px;
+    display: flex;              /* Horizontally align icon, text, and form in a single clean row */
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Left Circular Floating Icon Box */
+.cta-icon-holder {
+    background-color: rgba(255, 255, 255, 0.06); /* Ultra light transparent glass effect */
+    color: #ffffff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;         /* Turn wrapper into perfect balance circle shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;             /* Prevents circle icon shrinking on mid resolution viewports */
+}
+
+/* Central Typography Section Content */
+.cta-text-content {
+    flex: 1;                    /* Takes maximum available safe flex footprint center area */
+}
+
+.cta-text-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.3px;
+}
+
+.cta-text-content p {
+    font-size: 14.5px;
+    color: #94a3b8;             /* Clean secondary muted text for readability against dark backgrounds */
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Right Side Email Submission Form Tray */
+.cta-inline-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;                  /* Gap space separator between input bar and primary click actions */
+    flex-shrink: 0;
+}
+
+/* Form Input Element Field */
+.cta-inline-form input[type="email"] {
+    width: 280px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #0f172a;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-inline-form input[type="email"]:focus {
+    border-color: #3b82f6;      /* Interactive focus boundary update ring */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Action Subscribe Call button */
+.cta-inline-form button {
+    background-color: #2563eb;  /* Clean primary brand accent matching earlier links blueprint */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    cursor: pointer;
+    white-space: nowrap;        /* Keeps button wording tight inside block layout rules */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-inline-form button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* --- Responsive Configurations Breaks --- */
+
+/* Tablets / Lower Viewports structural adaptations */
+@media (max-width: 992px) {
+    .cta-banner-box {
+        flex-direction: column; /* Stack components cleanly vertical rows */
+        align-items: flex-start; /* Left aligns all items in stacked layout */
+        padding: 40px;
+        gap: 24px;
+    }
+
+    .cta-inline-form {
+        width: 100%;            /* Form elements adapt to span across mobile grid screens natively */
+    }
+
+    .cta-inline-form input[type="email"] {
+        flex: 1;                /* Field takes up full available space */
+    }
+}
+
+/* Extra small mobile configuration wrap fixes */
+@media (max-width: 520px) {
+    .cta-inline-form {
+        flex-direction: column; /* Stack input field and button vertically on small mobile displays */
+        align-items: stretch;
+    }
+    
+    .cta-inline-form input[type="email"] {
+        width: 100%;
+    }
+}
+footer {
+    width: 100%;
+    background-color: #0b0f19;
+    color: #ffffff;
+    padding: 60px 0 30px 0;
+    font-family: sans-serif;
+    margin-top: 60px;
+}
+
+footer > div:first-of-type {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+footer > div:first-of-type > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+footer h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 260px;
+}
+
+footer > div:first-of-type > div:first-child > div {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+footer > div:first-of-type > div:first-child > div a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer > div:first-of-type > div:first-child > div a:hover {
+    color: #3b82f6;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+footer ul a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+footer ul a:hover {
+    color: #ffffff;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #1f2937;
+    margin: 40px 0 20px 0;
+}
+
+footer > div:last-of-type {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer > div:last-of-type p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+footer > div:last-of-type a {
+    background-color: #2563eb;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+footer > div:last-of-type a:hover {
+    background-color: #1d4ed8;
+}
+
+/* ================= 11. GLOBAL RESPONSIVE MEDIA QUERIES ================= */
+@media (max-width: 1024px) {
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .main-layout-container {
+        flex-direction: column;
+    }
+    .blog-sidebar {
+        max-width: 100%;
+        width: 100%;
+    }
+    .why-us-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .why-us-info-left {
+        max-width: 100%;
+    }
+    .why-us-features-right {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .article-image-box {
+        width: 100%;
+        height: 200px;
+    }
+    .categories-grid {
+        flex-wrap: wrap;
+    }
+    .category-card {
+        min-width: 140px;
+    }
+    .cta-banner-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .cta-inline-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cta-inline-form input,
+    .cta-inline-form button {
+        width: 100%;
+    }
+    footer > div:first-of-type {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .trending-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-us-features-right {
+        grid-template-columns: 1fr;
+    }
+    footer > div:first-of-type {
+        grid-template-columns: 1fr;
+    }
+    footer > div:last-of-type {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+/* Footer Base Styles */
+.site-footer {
+    width: 100%;
+    background-color: #020617; /* Dark elegant theme layout */
+    color: #ffffff;
+    padding: 60px 0 30px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.site-footer * {
+    box-sizing: border-box;
+}
+
+/* Main Grid Container */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Brand column wider than others */
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Column General Styling */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Brand Column Layout */
+.footer-brand {
+    gap: 16px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 280px;
+}
+
+/* Social Media Links */
+.footer-socials {
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.footer-socials a {
+    color: #94a3b8;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: #3b82f6; /* Accent blue hover color */
+}
+
+/* Typography for Column Headers */
+.footer-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 24px 0;
+}
+
+/* Lists styling */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 2px; /* Subtle layout shifting for interactive feedback */
+}
+
+/* Divider Line */
+.footer-divider {
+    border: none;
+    border-top: 1px solid #1e293b;
+    max-width: 1200px;
+    margin: 40px auto 24px auto;
+}
+
+/* Bottom Bar Area */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.scroll-top-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Tablet Screens */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 16px;
+        text-align: center;
+    }
+}
+/* ================= MOBILE RESPONSIVENESS (Screens below 768px) ================= */
+@media (max-width: 768px) {
+    
+    /* 1. Navbar ko mobile par vertical ya scrollable banayein */
+    .navbar-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* 2. Hero Section Layout (Image ko text ke neeche le aayein aur center karein) */
+    .hero-container {
+        flex-direction: column-reverse; /* Image upar/neeche adjust karne ke liye */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-container img {
+        width: 100%; /* Mobile par image screen ke mutabiq auto-size ho jaye */
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* 3. Grids ko single column mein badlein (Trending, Categories, Featured) */
+    .trending-grid, 
+    .categories-grid, 
+    .featured-grid,
+    .why-us-features-right {
+        grid-template-columns: 1fr !important; /* Ek line mein ek hi card dikhega */
+        gap: 20px;
+    }
+
+    /* 4. Main Layout Container (Left posts aur Right sidebar ko ek ke neeche ek karein) */
+    .blog-main-layout-grid,
+    .main-layout-container {
+        grid-template-columns: 1fr !important;
+        flex-direction: column;
+    }
+
+    /* 5. Article Rows (Jo image aur text baray laptop par barabar mein the, mobile par upar-neeche ho jayein) */
+    .article-row,
+    .blog-post-card {
+        flex-direction: column;
+    }
+
+    .article-image-box, 
+    .blog-card-image {
+        width: 100% !important;
+        height: 200px;
+    }
+    
+    .article-image-box img, 
+    .blog-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* 6. Footer Columns */
+    .footer-container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 30px;
+    }
+}
