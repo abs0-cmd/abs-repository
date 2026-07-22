@@ -1,0 +1,152 @@
+
+/* --- THE MAIN LAYOUT GRID (REFERENCE IMAGE MATCH) --- */
+.blog-detailed-grid-layout {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 parts left article, 1 part right sidebar */
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Left Article Panel Box Styling */
+.main-content-area {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.category-tag-badge {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.article-title-heading {
+    font-size: 34px;
+    font-weight: 800;
+    color: #1a202c;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.article-short-lead {
+    font-size: 18px;
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+/* Author Info & Share Section Flexbox Strip */
+.author-meta-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.author-profile-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+}
+
+.author-name {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 14px;
+}
+
+.publish-date-meta {
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+.share-links-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-label-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #718096;
+}
+
+.share-icon-btn {
+    transition: transform 0.2s;
+}
+
+.share-icon-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Images Responsive Framework */
+.main-hero-image-box {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.responsive-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.inline-content-image {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.responsive-body-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Typography elements within Rich Body Text */
+.article-body-paragraphs h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 35px 0 15px 0;
+}
+
+.article-body-paragraphs p {
+    font-size: 16px;
+    color: #2d3748;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Clean Unordered/Ordered List items layout resetting original lists */
+.styled-bullet-points {
+    list-style-position: inside;
+    margin-bottom: 25px;
+    padding-left: 5px;
+}
+
+.styled-bullet-points li {
+    font-size: 15px;
+    color: #2d3748;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
